@@ -108,9 +108,11 @@
       top: 0; left: 0; right: 0;
       height: 2px;
     }
+    .card.cyan::before  { background: #00d4e8; }
     .card.blue::before  { background: #00d4e8; }
     .card.sky::before   { background: #4a9fd4; }
     .card.slate::before { background: #5a8fc0; }
+    .card.teal::before  { background: #0fa890; }
 
     .card:hover {
       transform: translateY(-3px);
@@ -123,9 +125,11 @@
       letter-spacing: 0.14em;
       margin-bottom: 8px;
     }
-    .card.blue .card-label { color: #00d4e8; }
-    .card.sky  .card-label { color: #4a9fd4; }
+    .card.cyan .card-label  { color: #00d4e8; }
+    .card.blue .card-label  { color: #00d4e8; }
+    .card.sky  .card-label  { color: #4a9fd4; }
     .card.slate .card-label { color: #5a8fc0; }
+    .card.teal .card-label  { color: #0fa890; }
 
     .card-title {
       font-size: 22px;
@@ -179,14 +183,26 @@
     </div>
 
     <div class="cards">
-      <a class="card cyan" href="setter_assists_leaderboard.html">
-        <div class="card-label">Top Setters · 20 Ranked</div>
+      <a class="card cyan" href="regional_sales_leaderboard.html">
+        <div class="card-label">3 Regions · Net Sales</div>
+        <div class="card-title">Region Net Sales</div>
+        <div class="card-desc">Total net sales per region · Excl. Cancelled / Retention / Holding</div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card teal" href="regional_installs_leaderboard.html">
+        <div class="card-label">3 Regions · Installs</div>
+        <div class="card-title">Region Installs</div>
+        <div class="card-desc">Total installs per region · Q1 2026 install date</div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="card blue" href="setter_assists_leaderboard.html">
+        <div class="card-label">Top Setters · 70 Ranked</div>
         <div class="card-title">Setter Assists</div>
         <div class="card-desc">Team-set appointments · Assist points only</div>
         <span class="card-arrow">→</span>
       </a>
-      <a class="card blue" href="uncommon_leaderboard.html">
-        <div class="card-label">All Reps · 100 Ranked</div>
+      <a class="card sky" href="uncommon_leaderboard.html">
+        <div class="card-label">All Reps · 176 Ranked</div>
         <div class="card-title">Net Sales PTS</div>
         <div class="card-desc">Self-gen closes · Lead closes · Assists</div>
         <span class="card-arrow">→</span>
@@ -198,7 +214,7 @@
         <span class="card-arrow">→</span>
       </a>
       <a class="card sky" href="lead_from_the_front.html">
-        <div class="card-label">Managers &amp; Regionals · 43 Ranked</div>
+        <div class="card-label">Managers &amp; Regionals · 46 Ranked</div>
         <div class="card-title">Lead From The Front</div>
         <div class="card-desc">Self-gen closes · Lead closes · Assists</div>
         <span class="card-arrow">→</span>
