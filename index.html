@@ -88,7 +88,7 @@
     /* 3-column grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
       text-align: left;
     }
@@ -190,7 +190,10 @@
       text-align: center;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
       .grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -231,7 +234,26 @@
         </div>
       </div>
 
-      <!-- Column 2: Teams -->
+      <!-- Column 2: Network -->
+      <div class="col">
+        <div class="col-header">Networks</div>
+        <div class="col-cards">
+          <a class="card violet" href="network_net_sales_leaderboard.html">
+            <div class="card-label">11 Networks · Net Sales</div>
+            <div class="card-title">Net Sales</div>
+            <div class="card-desc">Total net sales across all teams</div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a class="card violet" href="network_installs_leaderboard.html">
+            <div class="card-label">11 Networks · Installs</div>
+            <div class="card-title">Installs</div>
+            <div class="card-desc">Total installs across all teams</div>
+            <span class="card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 3: Teams -->
       <div class="col">
         <div class="col-header">Teams</div>
         <div class="col-cards">
@@ -250,9 +272,9 @@
         </div>
       </div>
 
-      <!-- Column 3: Individual -->
+      <!-- Column 4: Individual -->
       <div class="col">
-        <div class="col-header">Individual</div>
+        <div class="col-header">Individuals</div>
         <div class="col-cards">
           <a class="card sky" href="setter_assists_leaderboard.html">
             <div class="card-label">70 Ranked · Setters</div>
