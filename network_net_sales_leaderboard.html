@@ -245,17 +245,17 @@ function tier(val) {
 }
 
 const data = [
-  {name:"Jacob Davis / Mike Licata", val:75, pace:91.2},
-  {name:"Owen Haglund", val:41, pace:49.9},
-  {name:"Dennis Larsen", val:36, pace:43.8},
-  {name:"Matt Jameson / Jordan Bagwell", val:32, pace:38.9},
-  {name:"Dan Snow / Dillon Oliver", val:30, pace:36.5},
-  {name:"Al Cooper", val:22, pace:26.8},
-  {name:"Justin Johiro", val:22, pace:26.8},
-  {name:"Anthony Alexander", val:20, pace:24.3},
-  {name:"Stephen Haycock", val:14, pace:17.0},
-  {name:"Crystal Hogue", val:12, pace:14.6},
-  {name:"Dallen Akita", val:9, pace:10.9}
+  {name:"Jacob Davis / Mike Licata", region:"Forged", val:75, pace:91.2},
+  {name:"Owen Haglund", region:"Forged", val:41, pace:49.9},
+  {name:"Dennis Larsen", region:"theRepublic", val:36, pace:43.8},
+  {name:"Matt Jameson / Jordan Bagwell", region:"Catalyst", val:32, pace:38.9},
+  {name:"Dan Snow / Dillon Oliver", region:"theRepublic", val:30, pace:36.5},
+  {name:"Al Cooper", region:"Forged", val:22, pace:26.8},
+  {name:"Justin Johiro", region:"Forged", val:22, pace:26.8},
+  {name:"Anthony Alexander", region:"theRepublic", val:20, pace:24.3},
+  {name:"Stephen Haycock", region:"Catalyst", val:14, pace:17.0},
+  {name:"Crystal Hogue", region:"theRepublic", val:12, pace:14.6},
+  {name:"Dallen Akita", region:"Catalyst", val:9, pace:10.9}
 ];
 
 data.sort((a,b) => b.val - a.val);
@@ -285,7 +285,7 @@ data.forEach((r,i) => {
   tr.style.animationDelay = `${0.06 + i * 0.05}s`;
   tr.innerHTML = `
     <td>${badge}</td>
-    <td><div class="name-cell"><span class="name-bar" style="width:${barW}px"></span>${r.name}</div></td>
+    <td><div class="name-cell"><span class="name-bar" style="width:${barW}px"></span>${r.name}<span style="font-size:10px;font-weight:600;color:var(--muted);margin-left:8px;letter-spacing:0;text-transform:none">${r.region || ''}</span></div></td>
     <td>${r.val}</td>
     <td class="hide-sm"><span class="pace-val">${r.pace}</span></td>
   `;
