@@ -20,16 +20,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       text-transform: uppercase;
       letter-spacing: 0.04em;
+      padding: 40px 24px 60px;
     }
 
     body::after {
       content: '';
       position: fixed;
       inset: 0;
-      background: rgba(7, 11, 20, 0.82);
+      background: rgba(7, 11, 20, 0.84);
       pointer-events: none;
       z-index: 0;
     }
@@ -38,9 +39,8 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 40px 24px;
-      max-width: 600px;
       width: 100%;
+      max-width: 1060px;
     }
 
     .eyebrow {
@@ -85,18 +85,37 @@
     .divider-line { width: 60px; height: 1px; background: #00d4e8; opacity: 0.4; }
     .divider-dot  { width: 4px; height: 4px; border-radius: 50%; background: #00d4e8; opacity: 0.7; }
 
-    .cards {
+    /* 3-column grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      text-align: left;
+    }
+
+    .col-header {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      color: #00d4e8;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 212, 232, 0.25);
+    }
+
+    .col-cards {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
     }
 
     .card {
       display: block;
       text-decoration: none;
       background: rgba(12, 17, 32, 0.75);
-      border: 1px solid rgba(255,255,255,0.12);
-      padding: 28px 32px;
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 22px 24px;
       text-align: left;
       transition: transform 0.2s ease, border-color 0.2s ease;
       position: relative;
@@ -108,55 +127,59 @@
       top: 0; left: 0; right: 0;
       height: 2px;
     }
-    .card.cyan::before  { background: #00d4e8; }
-    .card.blue::before  { background: #00d4e8; }
-    .card.sky::before   { background: #4a9fd4; }
-    .card.slate::before { background: #5a8fc0; }
-    .card.teal::before  { background: #0fa890; }
+    .card.cyan::before   { background: #00d4e8; }
+    .card.teal::before   { background: #0fa890; }
+    
+    .card.sky::before    { background: #4a9fd4; }
+    .card.slate::before  { background: #5a8fc0; }
+    .card.purple::before { background: #9b6dff; }
+    .card.violet::before { background: #7b8cff; }
 
     .card:hover {
       transform: translateY(-3px);
-      border-color: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.22);
     }
 
     .card-label {
-      font-size: 10px;
+      font-size: 9px;
       font-weight: 700;
       letter-spacing: 0.14em;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
-    .card.cyan .card-label  { color: #00d4e8; }
-    .card.blue .card-label  { color: #00d4e8; }
-    .card.sky  .card-label  { color: #4a9fd4; }
-    .card.slate .card-label { color: #5a8fc0; }
-    .card.teal .card-label  { color: #0fa890; }
+    .card.cyan   .card-label { color: #00d4e8; }
+    .card.teal   .card-label { color: #0fa890; }
+    
+    .card.sky    .card-label { color: #4a9fd4; }
+    .card.slate  .card-label { color: #5a8fc0; }
+    .card.purple .card-label { color: #9b6dff; }
+    .card.violet .card-label { color: #7b8cff; }
 
     .card-title {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 900;
       color: #fff;
       letter-spacing: -0.01em;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .card-desc {
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 600;
       color: #8fa8c8;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
     .card-arrow {
       position: absolute;
-      right: 28px;
+      right: 20px;
       top: 50%;
       transform: translateY(-50%);
-      font-size: 20px;
-      opacity: 0.4;
+      font-size: 18px;
+      opacity: 0.35;
       transition: opacity 0.2s, right 0.2s;
     }
-    .card:hover .card-arrow { opacity: 0.8; right: 22px; }
+    .card:hover .card-arrow { opacity: 0.75; right: 14px; }
 
     .footer {
       margin-top: 40px;
@@ -164,6 +187,11 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       color: rgba(143, 168, 200, 0.4);
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -182,43 +210,77 @@
       <div class="divider-line"></div>
     </div>
 
-    <div class="cards">
-      <a class="card cyan" href="regional_sales_leaderboard.html">
-        <div class="card-label">3 Regions · Net Sales</div>
-        <div class="card-title">Region Net Sales</div>
-        <div class="card-desc">Total net sales per region · Excl. Cancelled / Retention / Holding</div>
-        <span class="card-arrow">→</span>
-      </a>
-      <a class="card teal" href="regional_installs_leaderboard.html">
-        <div class="card-label">3 Regions · Installs</div>
-        <div class="card-title">Region Installs</div>
-        <div class="card-desc">Total installs per region · Q1 2026 install date</div>
-        <span class="card-arrow">→</span>
-      </a>
-      <a class="card blue" href="setter_assists_leaderboard.html">
-        <div class="card-label">Top Setters · 70 Ranked</div>
-        <div class="card-title">Setter Assists</div>
-        <div class="card-desc">Team-set appointments · Assist points only</div>
-        <span class="card-arrow">→</span>
-      </a>
-      <a class="card sky" href="uncommon_leaderboard.html">
-        <div class="card-label">All Reps · 176 Ranked</div>
-        <div class="card-title">Net Sales PTS</div>
-        <div class="card-desc">Self-gen closes · Lead closes · Assists</div>
-        <span class="card-arrow">→</span>
-      </a>
-      <a class="card slate" href="installs_pts_leaderboard.html">
-        <div class="card-label">All Reps · Installs Only</div>
-        <div class="card-title">Install PTS</div>
-        <div class="card-desc">Self-gen closes · Lead closes · Assists</div>
-        <span class="card-arrow">→</span>
-      </a>
-      <a class="card sky" href="lead_from_the_front.html">
-        <div class="card-label">Managers &amp; Regionals · 46 Ranked</div>
-        <div class="card-title">Lead From The Front</div>
-        <div class="card-desc">Self-gen closes · Lead closes · Assists</div>
-        <span class="card-arrow">→</span>
-      </a>
+    <div class="grid">
+
+      <!-- Column 1: Regions -->
+      <div class="col">
+        <div class="col-header">Regions</div>
+        <div class="col-cards">
+          <a class="card cyan" href="regional_sales_leaderboard.html">
+            <div class="card-label">3 Regions · Net Sales</div>
+            <div class="card-title">Net Sales</div>
+            <div class="card-desc">Total net sales per region</div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a class="card teal" href="regional_installs_leaderboard.html">
+            <div class="card-label">3 Regions · Installs</div>
+            <div class="card-title">Installs</div>
+            <div class="card-desc">Total installs per region</div>
+            <span class="card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Teams -->
+      <div class="col">
+        <div class="col-header">Teams</div>
+        <div class="col-cards">
+          <a class="card violet" href="team_net_sales_leaderboard.html">
+            <div class="card-label">45 Teams · Net Sales</div>
+            <div class="card-title">Net Sales</div>
+            <div class="card-desc">Total net sales per team</div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a class="card violet" href="team_installs_leaderboard.html">
+            <div class="card-label">63 Teams · Installs</div>
+            <div class="card-title">Installs</div>
+            <div class="card-desc">Total installs per team</div>
+            <span class="card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 3: Individual -->
+      <div class="col">
+        <div class="col-header">Individual</div>
+        <div class="col-cards">
+          <a class="card sky" href="setter_assists_leaderboard.html">
+            <div class="card-label">70 Ranked · Setters</div>
+            <div class="card-title">Setter Assists</div>
+            <div class="card-desc">Assist points only</div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a class="card sky" href="uncommon_leaderboard.html">
+            <div class="card-label">176 Ranked · All Reps</div>
+            <div class="card-title">Net Sales PTS</div>
+            <div class="card-desc">Self-gen · Lead closes · Assists</div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a class="card slate" href="installs_pts_leaderboard.html">
+            <div class="card-label">All Reps · Installs Only</div>
+            <div class="card-title">Install PTS</div>
+            <div class="card-desc">Self-gen · Lead closes · Assists</div>
+            <span class="card-arrow">→</span>
+          </a>
+          <a class="card purple" href="lead_from_the_front.html">
+            <div class="card-label">Managers &amp; Regionals · 46 Ranked</div>
+            <div class="card-title">Lead From The Front</div>
+            <div class="card-desc">Self-gen · Lead closes · Assists</div>
+            <span class="card-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
     </div>
 
     <div class="footer">Q1 2026</div>
