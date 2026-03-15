@@ -144,7 +144,7 @@ tbody tr:hover { filter:brightness(1.12); }
 @keyframes rowFade { from{opacity:0;} to{opacity:1;} }
 td { padding:12px 16px; text-align:right; font-size:13px; font-weight:500; color:var(--off-white); white-space:nowrap; }
 td:first-child { text-align:center; }
-td:nth-child(2) { text-align:left; font-family:'Nunito',sans-serif; font-size:14px; font-weight:800; letter-spacing:0; text-transform:none; }
+td:nth-child(2) { text-align:left; font-family:'Nunito',sans-serif; font-size:14px; font-weight:800; letter-spacing:0; text-transform:uppercase; }
 td:nth-child(3) { text-align:left; font-size:11px; font-weight:600; color:var(--muted); text-transform:none; letter-spacing:0; }
 tr.tier-blazing td:nth-child(2) { color:var(--blazing); }
 tr.tier-warm td:nth-child(2) { color:var(--warm); }
@@ -351,9 +351,9 @@ data.forEach((r,i) => {
 });
 
 const r1 = data[0], r2 = data[1], r3 = data[2];
-if(r1) { document.getElementById('p1n').textContent = r1.team; document.getElementById('p1s').textContent = r1.val; document.getElementById('p1sub').textContent = r1.region + ' · ' + r1.reps + ' reps · ' + r1.avg + ' avg'; }
-if(r2) { document.getElementById('p2n').textContent = r2.team; document.getElementById('p2s').textContent = r2.val; document.getElementById('p2sub').textContent = r2.region + ' · ' + r2.reps + ' reps · ' + r2.avg + ' avg'; }
-if(r3) { document.getElementById('p3n').textContent = r3.team; document.getElementById('p3s').textContent = r3.val; document.getElementById('p3sub').textContent = r3.region + ' · ' + r3.reps + ' reps · ' + r3.avg + ' avg'; }
+if(r1) { document.getElementById('p1n').textContent = r1.team.toUpperCase(); document.getElementById('p1s').textContent = r1.val; document.getElementById('p1sub').textContent = r1.region + ' · ' + r1.reps + ' reps · ' + r1.avg + ' avg'; }
+if(r2) { document.getElementById('p2n').textContent = r2.team.toUpperCase(); document.getElementById('p2s').textContent = r2.val; document.getElementById('p2sub').textContent = r2.region + ' · ' + r2.reps + ' reps · ' + r2.avg + ' avg'; }
+if(r3) { document.getElementById('p3n').textContent = r3.team.toUpperCase(); document.getElementById('p3s').textContent = r3.val; document.getElementById('p3sub').textContent = r3.region + ' · ' + r3.reps + ' reps · ' + r3.avg + ' avg'; }
 
 const max = data[0].val;
 const tbody = document.getElementById('tbody');
