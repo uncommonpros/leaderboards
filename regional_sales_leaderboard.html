@@ -260,7 +260,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Region Total Net Sales</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Net Sale</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 74 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 75 of 90</div>
   </div>
 
 </div>
@@ -269,7 +269,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 74, Q1_TOTAL = 90;
+const Q1_ELAPSED = 75, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(val) {
@@ -278,9 +278,9 @@ function tier(val) {
 }
 
 const data = [
-  {region:"Forged", val:245, reps:63, avg:3.9, pace:298.0, top:"Jerry Jones (14) / Joshua Coen (12) / Krista West (12)"},
-  {region:"theRepublic", val:122, reps:39, avg:3.1, pace:148.4, top:"Nicholas Howard (14) / Sultan Ahmed (13) / Steve Hong (8)"},
-  {region:"Catalyst", val:70, reps:19, avg:3.7, pace:85.1, top:"Jordan Bagwell (10) / Matthew Jameson (8) / Ryan Stilwell (7)"}
+  {region:"Forged",val:245,reps:63,avg:3.9,pace:294.0},
+  {region:"theRepublic",val:122,reps:39,avg:3.1,pace:146.4},
+  {region:"Catalyst",val:70,reps:19,avg:3.7,pace:84.0}
 ];
 
 data.sort((a,b) => b.val - a.val);

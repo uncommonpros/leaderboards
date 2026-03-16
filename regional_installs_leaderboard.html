@@ -260,7 +260,7 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Region Total Installs</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Installs</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 74 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 75 of 90</div>
   </div>
 
 </div>
@@ -269,7 +269,7 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 74, Q1_TOTAL = 90;
+const Q1_ELAPSED = 75, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(val) {
@@ -278,9 +278,9 @@ function tier(val) {
 }
 
 const data = [
-  {region:"Forged", val:272, reps:81, avg:3.4, pace:330.8, top:"Michael Licata (14) / Natasha Mansouri (11) / Joshua Coen (10)"},
-  {region:"theRepublic", val:108, reps:52, avg:2.1, pace:131.4, top:"Nicholas Howard (10) / Micah Rizzuto (7) / Caleb Sartin (5)"},
-  {region:"Catalyst", val:75, reps:36, avg:2.1, pace:91.2, top:"Ryan Stilwell (6) / Charles Heaton (5) / Dallen Akita (5)"}
+  {region:"Forged",val:272,reps:81,avg:3.4,pace:326.4},
+  {region:"theRepublic",val:108,reps:52,avg:2.1,pace:129.6},
+  {region:"Catalyst",val:75,reps:36,avg:2.1,pace:90.0}
 ];
 
 data.sort((a,b) => b.val - a.val);
