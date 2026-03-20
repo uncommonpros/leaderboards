@@ -278,7 +278,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Team Total Net Sales</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Net Sales</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 75 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 79 of 90</div>
   </div>
 
 </div>
@@ -287,7 +287,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 75, Q1_TOTAL = 90;
+const Q1_ELAPSED = 79, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(val) {
@@ -296,51 +296,51 @@ function tier(val) {
 }
 
 const data = [
-  {team:"X Haglund",region:"Forged",val:41,reps:10,avg:4.1,pace:49.2},
-  {team:"L Jameson/Bagwell (AZ)",region:"Catalyst",val:32,reps:6,avg:5.3,pace:38.4},
-  {team:"X Jarvis",region:"Forged",val:23,reps:3,avg:7.7,pace:27.6},
-  {team:"X Johiro",region:"Forged",val:22,reps:3,avg:7.3,pace:26.4},
-  {team:"L ACooper (VA)",region:"Forged",val:22,reps:5,avg:4.4,pace:26.4},
-  {team:"L Larsen (CA)",region:"theRepublic",val:19,reps:7,avg:2.7,pace:22.8},
-  {team:"L Murray/Ahmed (MA)",region:"theRepublic",val:17,reps:3,avg:5.7,pace:20.4},
-  {team:"L Gold (OH)",region:"Forged",val:16,reps:5,avg:3.2,pace:19.2},
-  {team:"L Howard (CT)",region:"theRepublic",val:15,reps:2,avg:7.5,pace:18.0},
-  {team:"L Licata (CA)",region:"Forged",val:14,reps:4,avg:3.5,pace:16.8},
-  {team:"L Saunders (VA)",region:"Forged",val:14,reps:4,avg:3.5,pace:16.8},
-  {team:"L Engemann (CA)",region:"theRepublic",val:13,reps:4,avg:3.2,pace:15.6},
-  {team:"L BSmith (OH)",region:"Forged",val:12,reps:3,avg:4.0,pace:14.4},
-  {team:"L Hong/Rizzuto (CA)",region:"theRepublic",val:12,reps:2,avg:6.0,pace:14.4},
-  {team:"L Coen (AZ)",region:"Forged",val:12,reps:1,avg:12.0,pace:14.4},
-  {team:"L Fulton (IL)",region:"Forged",val:11,reps:2,avg:5.5,pace:13.2},
-  {team:"X Shimabukuro/Kawakami",region:"Forged",val:11,reps:2,avg:5.5,pace:13.2},
-  {team:"L Morgan (OH)",region:"Forged",val:10,reps:5,avg:2.0,pace:12.0},
-  {team:"X Heaton",region:"Catalyst",val:9,reps:2,avg:4.5,pace:10.8},
-  {team:"L Akita (FL)",region:"Catalyst",val:9,reps:4,avg:2.2,pace:10.8},
-  {team:"L Duerr (PA)",region:"Forged",val:9,reps:4,avg:2.2,pace:10.8},
-  {team:"L Quirante (FL)",region:"Catalyst",val:9,reps:3,avg:3.0,pace:10.8},
-  {team:"L Cavada (ME)",region:"Forged",val:8,reps:1,avg:8.0,pace:9.6},
-  {team:"L Alexander (CA)",region:"theRepublic",val:7,reps:3,avg:2.3,pace:8.4},
-  {team:"L Oliver (CA)",region:"theRepublic",val:7,reps:3,avg:2.3,pace:8.4},
-  {team:"L Snow (FL)",region:"theRepublic",val:6,reps:4,avg:1.5,pace:7.2},
-  {team:"L Garcia/Williams (CT)",region:"theRepublic",val:6,reps:3,avg:2.0,pace:7.2},
-  {team:"L JAlexander (FL)",region:"Catalyst",val:5,reps:2,avg:2.5,pace:6.0},
-  {team:"L Lara (NJ)",region:"Catalyst",val:5,reps:1,avg:5.0,pace:6.0},
-  {team:"L Midland (CA)",region:"theRepublic",val:5,reps:2,avg:2.5,pace:6.0},
-  {team:"X Brumley",region:"theRepublic",val:4,reps:2,avg:2.0,pace:4.8},
-  {team:"X Ahlers",region:"theRepublic",val:4,reps:2,avg:2.0,pace:4.8},
-  {team:"X Garcia",region:"Forged",val:3,reps:1,avg:3.0,pace:3.6},
-  {team:"L Harding (TX)",region:"Forged",val:3,reps:1,avg:3.0,pace:3.6},
-  {team:"L Nowlin (CO)",region:"Forged",val:3,reps:2,avg:1.5,pace:3.6},
-  {team:"L Davis (OH)",region:"Forged",val:3,reps:2,avg:1.5,pace:3.6},
-  {team:"X Fuentes",region:"theRepublic",val:3,reps:1,avg:3.0,pace:3.6},
-  {team:"L Schreiber (CO)",region:"Forged",val:2,reps:2,avg:1.0,pace:2.4},
-  {team:"L Hagemeyer (CA)",region:"Forged",val:2,reps:1,avg:2.0,pace:2.4},
-  {team:"X Fuentes/Salas",region:"theRepublic",val:2,reps:1,avg:2.0,pace:2.4},
-  {team:"X Hogue",region:"theRepublic",val:2,reps:1,avg:2.0,pace:2.4},
-  {team:"L Maxey (IL)",region:"Forged",val:2,reps:1,avg:2.0,pace:2.4},
-  {team:"L Ford (UT)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.2},
-  {team:"L Larios/Rodriguez (TX)",region:"Catalyst",val:1,reps:1,avg:1.0,pace:1.2},
-  {team:"L LRodriguez (PR)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.2}
+  {team:"X Haglund",region:"Forged",val:51,reps:10,avg:5.1,pace:58.1},
+  {team:"L Jameson/Bagwell (AZ)",region:"Catalyst",val:33,reps:6,avg:5.5,pace:37.6},
+  {team:"X Johiro",region:"Forged",val:27,reps:3,avg:9.0,pace:30.8},
+  {team:"X Jarvis",region:"Forged",val:24,reps:3,avg:8.0,pace:27.3},
+  {team:"L Larsen (CA)",region:"theRepublic",val:23,reps:7,avg:3.3,pace:26.2},
+  {team:"L Coen (AZ)",region:"Forged",val:21,reps:1,avg:21.0,pace:23.9},
+  {team:"L ACooper (VA)",region:"Forged",val:21,reps:5,avg:4.2,pace:23.9},
+  {team:"L Murray/Ahmed (MA)",region:"theRepublic",val:18,reps:3,avg:6.0,pace:20.5},
+  {team:"L Gold (OH)",region:"Forged",val:17,reps:5,avg:3.4,pace:19.4},
+  {team:"L Howard (CT)",region:"theRepublic",val:16,reps:2,avg:8.0,pace:18.2},
+  {team:"L Licata (CA)",region:"Forged",val:16,reps:4,avg:4.0,pace:18.2},
+  {team:"L Hong/Rizzuto (CA)",region:"theRepublic",val:15,reps:2,avg:7.5,pace:17.1},
+  {team:"L Caras (CA)",region:"Forged",val:14,reps:4,avg:3.5,pace:15.9},
+  {team:"X Shimabukuro/Kawakami",region:"Forged",val:13,reps:2,avg:6.5,pace:14.8},
+  {team:"L Engemann (CA)",region:"theRepublic",val:13,reps:4,avg:3.2,pace:14.8},
+  {team:"L BSmith (OH)",region:"Forged",val:13,reps:3,avg:4.3,pace:14.8},
+  {team:"L Cavada (ME)",region:"Forged",val:12,reps:1,avg:12.0,pace:13.7},
+  {team:"L Fulton (IL)",region:"Forged",val:11,reps:2,avg:5.5,pace:12.5},
+  {team:"L Akita (FL)",region:"Catalyst",val:11,reps:4,avg:2.8,pace:12.5},
+  {team:"L Quirante (FL)",region:"Catalyst",val:11,reps:3,avg:3.7,pace:12.5},
+  {team:"L Duerr (PA)",region:"Forged",val:11,reps:4,avg:2.8,pace:12.5},
+  {team:"L Oliver (CA)",region:"theRepublic",val:10,reps:4,avg:2.5,pace:11.4},
+  {team:"X Heaton",region:"Catalyst",val:9,reps:2,avg:4.5,pace:10.3},
+  {team:"L Morgan (OH)",region:"Forged",val:9,reps:4,avg:2.2,pace:10.3},
+  {team:"L Snow (FL)",region:"theRepublic",val:7,reps:4,avg:1.8,pace:8.0},
+  {team:"L Midland (CA)",region:"theRepublic",val:6,reps:2,avg:3.0,pace:6.8},
+  {team:"L Alexander (CA)",region:"theRepublic",val:6,reps:3,avg:2.0,pace:6.8},
+  {team:"L Garcia/Williams (CT)",region:"theRepublic",val:6,reps:3,avg:2.0,pace:6.8},
+  {team:"X Brumley",region:"theRepublic",val:5,reps:2,avg:2.5,pace:5.7},
+  {team:"X Ahlers",region:"theRepublic",val:5,reps:2,avg:2.5,pace:5.7},
+  {team:"L Lara (NJ)",region:"Forged",val:5,reps:1,avg:5.0,pace:5.7},
+  {team:"L JAlexander (FL)",region:"Catalyst",val:4,reps:2,avg:2.0,pace:4.6},
+  {team:"L Nowlin (CO)",region:"Forged",val:4,reps:2,avg:2.0,pace:4.6},
+  {team:"L Harding (TX)",region:"Catalyst",val:3,reps:1,avg:3.0,pace:3.4},
+  {team:"L Schreiber (CO)",region:"Forged",val:3,reps:2,avg:1.5,pace:3.4},
+  {team:"L Davis (OH)",region:"Forged",val:3,reps:2,avg:1.5,pace:3.4},
+  {team:"X Fuentes/Salas",region:"theRepublic",val:3,reps:1,avg:3.0,pace:3.4},
+  {team:"X Garcia",region:"Forged",val:3,reps:1,avg:3.0,pace:3.4},
+  {team:"L Maxey (IL)",region:"Forged",val:2,reps:1,avg:2.0,pace:2.3},
+  {team:"L Hagemeyer (CA)",region:"Forged",val:2,reps:1,avg:2.0,pace:2.3},
+  {team:"X Hogue",region:"theRepublic",val:2,reps:1,avg:2.0,pace:2.3},
+  {team:"X Fuentes",region:"theRepublic",val:2,reps:1,avg:2.0,pace:2.3},
+  {team:"L Ford (UT)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.1},
+  {team:"L Larios/Rodriguez (TX)",region:"Catalyst",val:1,reps:1,avg:1.0,pace:1.1},
+  {team:"L LRodriguez (PR)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.1}
 ];
 
 data.sort((a,b) => b.val - a.val);

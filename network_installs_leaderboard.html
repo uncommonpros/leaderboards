@@ -227,7 +227,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Network total Installs across all teams</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 75 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 79 of 90</div>
   </div>
 
 </div>
@@ -236,7 +236,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 75, Q1_TOTAL = 90;
+const Q1_ELAPSED = 79, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(val) {
@@ -245,17 +245,17 @@ function tier(val) {
 }
 
 const data = [
-  {name:"Jacob Davis / Mike Licata",region:"Forged",val:108,pace:129.6},
-  {name:"Owen Haglund",region:"Forged",val:47,pace:56.4},
-  {name:"Dennis Larsen",region:"theRepublic",val:22,pace:26.4},
-  {name:"Matt Jameson / Jordan Bagwell",region:"Catalyst",val:27,pace:32.4},
-  {name:"Dan Snow / Dillon Oliver",region:"theRepublic",val:21,pace:25.2},
-  {name:"Al Cooper",region:"Forged",val:22,pace:26.4},
-  {name:"Justin Johiro",region:"Forged",val:3,pace:3.6},
-  {name:"Anthony Alexander",region:"theRepublic",val:26,pace:31.2},
-  {name:"Stephen Haycock",region:"Catalyst",val:21,pace:25.2},
-  {name:"Crystal Hogue",region:"theRepublic",val:12,pace:14.4},
-  {name:"Dallen Akita",region:"Catalyst",val:11,pace:13.2}
+  {name:"Jacob Davis / Mike Licata",region:"Forged",val:117,pace:133.3},
+  {name:"Owen Haglund",region:"Forged",val:51,pace:58.1},
+  {name:"Dennis Larsen",region:"theRepublic",val:26,pace:29.6},
+  {name:"Dan Snow / Dillon Oliver",region:"theRepublic",val:23,pace:26.2},
+  {name:"Matt Jameson / Jordan Bagwell",region:"Catalyst",val:31,pace:35.3},
+  {name:"Justin Johiro",region:"Forged",val:4,pace:4.6},
+  {name:"Al Cooper",region:"Forged",val:25,pace:28.5},
+  {name:"Anthony Alexander",region:"theRepublic",val:27,pace:30.8},
+  {name:"Crystal Hogue",region:"theRepublic",val:12,pace:13.7},
+  {name:"Dallen Akita",region:"Catalyst",val:12,pace:13.7},
+  {name:"Stephen Haycock",region:"Catalyst",val:5,pace:5.7}
 ];
 
 data.sort((a,b) => b.val - a.val);
