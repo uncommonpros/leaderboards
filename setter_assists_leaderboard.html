@@ -360,7 +360,7 @@ tbody td:last-child { text-align:right; }
 </div>
 
 <script>
-const DAYS_ELAPSED = 79;
+const DAYS_ELAPSED = 82;
 const DAYS_IN_Q1 = 90;
 const PACE_MULT = DAYS_IN_Q1 / DAYS_ELAPSED;  // 90/62 = ~1.45
 
@@ -380,35 +380,28 @@ function shortName(full) {
 
 // Raw data: [name, assists]
 const raw = [
-  ["Dalton Baker",13],
-  ["Andrew Diana",9],
+  ["Dalton Baker",14],
+  ["Brant Smith",10],
+  ["Cody Mack",10],
+  ["Andrew Diana",10],
   ["Daxton Parke",9],
-  ["Matthew Chapin",8],
-  ["Cody Mack",8],
-  ["Brant Smith",8],
-  ["John Vitulli",7],
-  ["Jarvis Gulley",7],
-  ["Austin Sims",7],
-  ["Nathan Osborne",7],
+  ["Matthew Chapin",9],
+  ["Nathan Osborne",8],
   ["William Sheets",7],
+  ["Austin Sims",7],
+  ["Tiana Ramirez",7],
+  ["Jarvis Gulley",7],
+  ["John Vitulli",7],
   ["Marty Stout",6],
-  ["Tiana Ramirez",6],
+  ["Robert Kohnle",6],
+  ["Cynita Woodhouse",5],
   ["Wyatt Maloy",5],
   ["Jeremy Gillon",5],
-  ["Robert Kohnle",5],
-  ["Cynita Woodhouse",5],
-  ["Danielle Tobin",4],
-  ["Kestahn Moore-Dunning",4],
-  ["David Mawamba",4],
-  ["Clifford Reynolds",4],
+  ["Kestahn Moore-Dunning",5],
+  ["Danielle Tobin",5],
   ["Jordan Bernstein",4],
   ["Brian McNulty",4],
-  ["Troy Sheridan",3],
-  ["Edwin Frankel",3],
-  ["Allah Brown",3],
-  ["Brendon Mehlhorn",3],
-  ["Philip Tavison",3],
-  ["Aaron Snouffer",3]
+  ["Clifford Reynolds",4]
 ];
 
 const data = raw.map(r => ({

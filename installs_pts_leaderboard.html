@@ -437,7 +437,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Self-Gen Close = 1 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Lead Close = 0.5 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--muted)"></div>Assist = 0.5 pt</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 79 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 82 of 90</div>
   </div>
 
 </div>
@@ -447,7 +447,7 @@ document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
 // Q1 2026: day 62 of 90 (Jan 31 + Feb 28 + Mar 3)
-const Q1_ELAPSED = 79, Q1_TOTAL = 90;
+const Q1_ELAPSED = 82, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(pts) {
@@ -456,7 +456,7 @@ function tier(pts) {
 }
 
 // Regions from rep roster
-const regions = {"Brooke Altom Lowe": "Forged", "Michael Licata": "Forged", "Chantal Helia Mansouri": "Forged", "Micah John Rizzuto": "theRepublic", "Kristi Irene Caras": "Forged", "Joshua E Davis": "Forged", "Natasha Mansouri": "Forged", "Nicholas Lee Howard": "theRepublic", "Joshua Glenn Coen": "Forged", "Matthew Vincent Fulton": "Forged", "Daniel Alexander Cavada": "Forged", "Otto Ranses Zelaya": "theRepublic", "Jerry Wayne Jones": "Forged", "Brandon James Smith": "Forged", "Jay A Presley": "Forged", "Owen Marsh Haglund": "Forged", "Jantzen Jarvis": "Forged", "Cynita Woodhouse": "Forged", "Ryan Stilwell": "Catalyst", "Nicholas Bradley Russo": "Forged", "Roberto Garcia Jr": "theRepublic", "Michael Robert Green": "Forged", "Daniel Joseph Snow": "theRepublic", "James Edward Hall": "Forged", "Omar Smaili": "Forged", "Caleb Michael Sartin": "theRepublic", "Cody Christopher Zacharyasz": "Forged", "Michelle Marie Garcia": "Forged", "Ryan Boyd": "Forged", "Elizabeth B Harris": "Forged", "Charles Heaton": "Catalyst", "Francisco Emmanuel Flores": "theRepublic", "Austin Engemann": "theRepublic", "Matthew Jameson": "Catalyst", "Dallen Akita": "Catalyst", "Daniel Robert Nelson": "Forged", "Selena Marie Renee Salas": "theRepublic", "Wyatt Duane Maloy": "Catalyst", "Jordan Matthew Bagwell": "Catalyst", "Joshua Michael Wocher": "Forged", "Maira Nicole Maxey - BLOCKED": "Forged", "Shawn Harding": "Catalyst", "Shiloh Howard": "theRepublic", "Nehemiah Moore Arzeez": "Forged", "Justin Tribe": "Forged", "Jamell Harrell Mingo": "Catalyst", "Jose Elias Fuentes Rodriguez": "theRepublic", "Sarah Mitchell": "Forged"};
+const regions = {"Brooke Altom Lowe": "Forged", "Michael Licata": "Forged", "Chantal Helia Mansouri": "Forged", "Micah John Rizzuto": "theRepublic", "Matthew Vincent Fulton": "Forged", "Kristi Irene Caras": "Forged", "Joshua E Davis": "Forged", "Nicholas Lee Howard": "theRepublic", "Natasha Mansouri": "Forged", "Joshua Glenn Coen": "Forged", "Daniel Alexander Cavada": "Forged", "Otto Ranses Zelaya": "theRepublic", "Jerry Wayne Jones": "Forged", "Brandon James Smith": "Forged", "Jay A Presley": "Forged", "Owen Marsh Haglund": "Forged", "Jantzen Jarvis": "Forged", "Cynita Woodhouse": "Forged", "Ryan Stilwell": "Catalyst", "Nicholas Bradley Russo": "Forged", "Roberto Garcia Jr": "theRepublic", "Selena Marie Renee Salas": "theRepublic", "Cody Christopher Zacharyasz": "Forged", "James Edward Hall": "Forged", "Caleb Michael Sartin": "theRepublic", "Daniel Joseph Snow": "theRepublic", "Ryan Boyd": "Forged", "Omar Smaili": "Forged", "Michael Robert Green": "Forged", "Michelle Marie Garcia": "Forged", "Elizabeth B Harris": "Forged", "Daniel Robert Nelson": "Forged", "Charles Heaton": "Catalyst", "Dallen Akita": "Catalyst", "Francisco Emmanuel Flores": "theRepublic", "Dennis Tommy Larsen": "theRepublic", "Austin Engemann": "theRepublic", "Matthew Jameson": "Catalyst", "Wyatt Duane Maloy": "Catalyst", "Sarah Mitchell": "Forged", "Jordan Matthew Bagwell": "Catalyst", "Frederick Montana Quirante": "Catalyst", "Maira Nicole Maxey - BLOCKED": "Forged", "Joshua Michael Wocher": "Forged", "Jamell Harrell Mingo": "Catalyst", "Shiloh Howard": "theRepublic", "Shawn Harding": "Catalyst", "Justin Tribe": "Forged", "Michael Gold": "Forged", "Nehemiah Moore Arzeez": "Forged", "Jose Elias Fuentes Rodriguez": "theRepublic", "Omar D Harris": "Forged", "Maxwell Richard Kessler": "theRepublic", "Charles Ray Hamilton II": "Forged", "Aaron Michael Gunn": "Forged", "Benjamin P. Elson": "Forged", "Shawn James Sizer": "Forged", "Jacob Davis": "Forged", "Armando Garcia Rodriguez Jr": "Forged", "Gabrielle Marie Nicholas": "Catalyst", "James Henry Jr": "Forged", "Michael Blomquist": "Catalyst", "Kemara Uth Kem": "theRepublic", "William Daughtry": "Forged", "Brandon Quirante": "Catalyst", "Andrew Valencia": "Forged", "Johna DiBeneditto": "theRepublic", "Skylar Michael Morgan": "Forged", "Riley L Powell": "Forged", "Muhammad Ali Umer": "Catalyst", "Benjamin Ryan Duenas Umagat": "Forged", "Robert Charles Willis Jr": "theRepublic", "Amir Joseph Alami": "Forged", "Krista West": "Forged"};
 
 const SUFFIXES = new Set(['jr','sr','ii','iii','iv']);
 function shortName(full) {
@@ -473,12 +473,12 @@ const raw = [
   ["Michael Licata",8.5,0,8.5],
   ["Chantal Helia Mansouri",7.0,0.5,7.5],
   ["Micah John Rizzuto",6.5,0,6.5],
+  ["Matthew Vincent Fulton",6.5,0,6.5],
   ["Kristi Irene Caras",6.0,0.5,6.5],
   ["Joshua E Davis",6.0,0,6.0],
-  ["Natasha Mansouri",6.0,0,6.0],
   ["Nicholas Lee Howard",6.0,0,6.0],
+  ["Natasha Mansouri",6.0,0,6.0],
   ["Joshua Glenn Coen",5.5,0,5.5],
-  ["Matthew Vincent Fulton",5.5,0,5.5],
   ["Daniel Alexander Cavada",5.0,0.5,5.5],
   ["Otto Ranses Zelaya",5.0,0,5.0],
   ["Jerry Wayne Jones",4.5,0.5,5.0],
@@ -490,33 +490,59 @@ const raw = [
   ["Ryan Stilwell",4.0,0,4.0],
   ["Nicholas Bradley Russo",4.0,0,4.0],
   ["Roberto Garcia Jr",4.0,0,4.0],
-  ["Michael Robert Green",3.5,0,3.5],
-  ["Daniel Joseph Snow",3.5,0,3.5],
-  ["James Edward Hall",3.5,0,3.5],
-  ["Omar Smaili",3.5,0,3.5],
-  ["Caleb Michael Sartin",3.5,0,3.5],
+  ["Selena Marie Renee Salas",3.5,0.5,4.0],
   ["Cody Christopher Zacharyasz",3.5,0,3.5],
-  ["Michelle Marie Garcia",3.5,0,3.5],
+  ["James Edward Hall",3.5,0,3.5],
+  ["Caleb Michael Sartin",3.5,0,3.5],
+  ["Daniel Joseph Snow",3.5,0,3.5],
   ["Ryan Boyd",3.5,0,3.5],
+  ["Omar Smaili",3.5,0,3.5],
+  ["Michael Robert Green",3.5,0,3.5],
+  ["Michelle Marie Garcia",3.5,0,3.5],
   ["Elizabeth B Harris",3.0,0,3.0],
+  ["Daniel Robert Nelson",3.0,0,3.0],
   ["Charles Heaton",3.0,0,3.0],
+  ["Dallen Akita",3.0,0,3.0],
   ["Francisco Emmanuel Flores",3.0,0,3.0],
+  ["Dennis Tommy Larsen",3.0,0,3.0],
   ["Austin Engemann",3.0,0,3.0],
   ["Matthew Jameson",3.0,0,3.0],
-  ["Dallen Akita",3.0,0,3.0],
-  ["Daniel Robert Nelson",3.0,0,3.0],
-  ["Selena Marie Renee Salas",2.5,0.5,3.0],
   ["Wyatt Duane Maloy",2.0,1.0,3.0],
+  ["Sarah Mitchell",1.0,2.0,3.0],
   ["Jordan Matthew Bagwell",2.5,0,2.5],
-  ["Joshua Michael Wocher",2.5,0,2.5],
+  ["Frederick Montana Quirante",2.5,0,2.5],
   ["Maira Nicole Maxey - BLOCKED",2.5,0,2.5],
-  ["Shawn Harding",2.5,0,2.5],
-  ["Shiloh Howard",2.5,0,2.5],
-  ["Nehemiah Moore Arzeez",2.5,0,2.5],
-  ["Justin Tribe",2.5,0,2.5],
+  ["Joshua Michael Wocher",2.5,0,2.5],
   ["Jamell Harrell Mingo",2.5,0,2.5],
+  ["Shiloh Howard",2.5,0,2.5],
+  ["Shawn Harding",2.5,0,2.5],
+  ["Justin Tribe",2.5,0,2.5],
+  ["Michael Gold",2.5,0,2.5],
+  ["Nehemiah Moore Arzeez",2.5,0,2.5],
   ["Jose Elias Fuentes Rodriguez",1.5,1.0,2.5],
-  ["Sarah Mitchell",1.0,1.5,2.5]
+  ["Omar D Harris",2.0,0,2.0],
+  ["Maxwell Richard Kessler",2.0,0,2.0],
+  ["Charles Ray Hamilton II",2.0,0,2.0],
+  ["Aaron Michael Gunn",2.0,0,2.0],
+  ["Benjamin P. Elson",2.0,0,2.0],
+  ["Shawn James Sizer",2.0,0,2.0],
+  ["Jacob Davis",2.0,0,2.0],
+  ["Armando Garcia Rodriguez Jr",2.0,0,2.0],
+  ["Gabrielle Marie Nicholas",2.0,0,2.0],
+  ["James Henry Jr",2.0,0,2.0],
+  ["Michael Blomquist",2.0,0,2.0],
+  ["Kemara Uth Kem",2.0,0,2.0],
+  ["William Daughtry",2.0,0,2.0],
+  ["Brandon Quirante",2.0,0,2.0],
+  ["Andrew Valencia",2.0,0,2.0],
+  ["Johna DiBeneditto",2.0,0,2.0],
+  ["Skylar Michael Morgan",2.0,0,2.0],
+  ["Riley L Powell",2.0,0,2.0],
+  ["Muhammad Ali Umer",1.5,0.5,2.0],
+  ["Benjamin Ryan Duenas Umagat",1.5,0.5,2.0],
+  ["Robert Charles Willis Jr",1.0,1.0,2.0],
+  ["Amir Joseph Alami",1.0,1.0,2.0],
+  ["Krista West",0.5,1.5,2.0]
 ];
 
 
