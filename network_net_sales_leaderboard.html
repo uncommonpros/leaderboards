@@ -227,7 +227,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Network total Net Sales across all teams</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 82 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 83 of 90</div>
   </div>
 
 </div>
@@ -236,7 +236,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 82, Q1_TOTAL = 90;
+const Q1_ELAPSED = 83, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(val) {
@@ -245,16 +245,16 @@ function tier(val) {
 }
 
 const data = [
-  {name:"Jacob Davis / Mike Licata",region:"Forged",val:90,pace:98.8},
-  {name:"Owen Haglund",region:"Forged",val:57,pace:62.6},
-  {name:"Justin Johiro",region:"Forged",val:45,pace:49.4},
-  {name:"Dennis Larsen",region:"theRepublic",val:43,pace:47.2},
-  {name:"Matt Jameson / Jordan Bagwell",region:"Catalyst",val:39,pace:42.8},
-  {name:"Dan Snow / Dillon Oliver",region:"theRepublic",val:38,pace:41.7},
-  {name:"Al Cooper",region:"Forged",val:22,pace:24.1},
-  {name:"Anthony Alexander",region:"theRepublic",val:18,pace:19.8},
-  {name:"Crystal Hogue",region:"theRepublic",val:16,pace:17.6},
-  {name:"Dallen Akita",region:"Catalyst",val:11,pace:12.1},
+  {name:"Jacob Davis / Mike Licata",region:"Forged",val:93,pace:100.8},
+  {name:"Owen Haglund",region:"Forged",val:60,pace:65.1},
+  {name:"Justin Johiro",region:"Forged",val:46,pace:49.9},
+  {name:"Dennis Larsen",region:"theRepublic",val:45,pace:48.8},
+  {name:"Matt Jameson / Jordan Bagwell",region:"Catalyst",val:40,pace:43.4},
+  {name:"Dan Snow / Dillon Oliver",region:"theRepublic",val:37,pace:40.1},
+  {name:"Al Cooper",region:"Forged",val:24,pace:26.0},
+  {name:"Anthony Alexander",region:"theRepublic",val:18,pace:19.5},
+  {name:"Crystal Hogue",region:"theRepublic",val:16,pace:17.3},
+  {name:"Dallen Akita",region:"Catalyst",val:11,pace:11.9},
   {name:"Stephen Haycock",region:"Catalyst",val:0,pace:0.0}
 ];
 
