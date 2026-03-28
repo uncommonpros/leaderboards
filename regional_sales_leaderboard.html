@@ -260,7 +260,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Region Total Net Sales</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Net Sale</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 88 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 90 of 90</div>
   </div>
 
 </div>
@@ -269,7 +269,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 88, Q1_TOTAL = 90;
+const Q1_ELAPSED = 90, Q1_TOTAL = 90;
 const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
 
 function tier(val) {
@@ -278,9 +278,9 @@ function tier(val) {
 }
 
 const data = [
-  {region:"Forged",val:304,reps:60,avg:5.1,pace:310.9},
-  {region:"theRepublic",val:156,reps:40,avg:3.9,pace:159.5},
-  {region:"Catalyst",val:101,reps:24,avg:4.2,pace:103.3}
+  {region:"Forged",val:300,reps:61,avg:4.9,pace:300.0},
+  {region:"theRepublic",val:162,reps:40,avg:4.0,pace:162.0},
+  {region:"Catalyst",val:100,reps:24,avg:4.2,pace:100.0}
 ];
 
 data.sort((a,b) => b.val - a.val);
