@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Setter Assists Leaderboard — Uncommon Division Q1 2026</title>
+<title>Setter Assists Leaderboard — Uncommon Division Q2 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -21,7 +21,7 @@
   --sky:       #4a9fd4;   /* 2nd place / MID tier — sky blue */
   --slate:     #5a8fc0;   /* 3rd place / LOW tier — deep slate */
 
-  /* Pace tier colors (based on Q1 projection) */
+  /* Pace tier colors (based on Q2 projection) */
   --hot:       #00d4e8;   /* pace > 13  — electric cyan  */
   --mid:       #4a9fd4;   /* pace 6-13  — sky blue       */
   --low:       #3a6494;   /* pace < 6   — deep slate     */
@@ -295,7 +295,7 @@ tbody td:last-child { text-align:right; }
   </div>
   <div class="header-right">
     <div class="header-division">Uncommon Division</div>
-    <div class="header-period">Q1 2026</div>
+    <div class="header-period">Q2 2026</div>
   </div>
 </div>
 
@@ -351,7 +351,7 @@ tbody td:last-child { text-align:right; }
           <th>Rank</th>
           <th>Name</th>
           <th>Assists</th>
-          <th class="hide-sm">Q1 Pace</th>
+          <th class="hide-sm">Q2 Pace</th>
         </tr>
       </thead>
       <tbody id="tbody"></tbody>
@@ -361,11 +361,8 @@ tbody td:last-child { text-align:right; }
 
 <script>
 const DAYS_ELAPSED = 90;
-const DAYS_IN_Q1 = 90;
-const PACE_MULT = DAYS_IN_Q1 / DAYS_ELAPSED;  // 90/62 = ~1.45
-
-function tier(pts) {
-  if (pts > 13) return 'hot';
+const DAYS_IN_Q2 = 91;
+const PACE_MULT = DAYS_IN_Q2 / DAYS_ELAPSED;  // 91/6 = ~15.2;
   if (pts >= 6)  return 'mid';
   return 'low';
 }
@@ -380,46 +377,17 @@ function shortName(full) {
 
 // Raw data: [name, assists]
 const raw = [
-  ["Dalton Baker",20],
-  ["Cody Mack",11],
-  ["Daxton Parke",10],
-  ["David Mawamba",10],
-  ["Austin Sims",10],
-  ["Matthew Chapin",10],
-  ["Andrew Diana",8],
-  ["Robert Kohnle",7],
-  ["Tiana Ramirez",7],
-  ["Nathan Osborne",7],
-  ["John Vitulli",6],
-  ["Sunly Accounting",6],
-  ["Marty Stout",6],
-  ["Jarvis Gulley",6],
-  ["Brant Smith",6],
-  ["Danielle Tobin",5],
-  ["Jeremy Gillon",5],
-  ["William Sheets",5],
-  ["Kestahn Moore-Dunning",5],
-  ["David Meader",5],
-  ["Cynita Woodhouse",5],
-  ["Jordan Bernstein",4],
-  ["Clifford Reynolds",4],
-  ["Christy Schreiber",4],
-  ["Dylan Avery",4],
-  ["Wyatt Maloy",4],
-  ["Sarah Mitchell",3],
-  ["Joshua Luna",3],
-  ["Shobal Greene",3],
-  ["Jose Rodriguez",3],
-  ["John Wooten",3],
-  ["Juan Nieves",3],
-  ["Ricardo Ortiz",3],
-  ["Brian McNulty",3],
-  ["Brendon Mehlhorn",3],
-  ["Jeremiah Strauss",3],
-  ["Omar Smaili",3],
-  ["Edwin Frankel",3],
-  ["Lois Hollingsworth",3],
-  ["Isaiah Sneed",3]
+  ["Nicholas Killilea",2],
+  ["Mary Childress",1],
+  ["Andrea Burkhimer",1],
+  ["Shawn Sizer",1],
+  ["Milton Dowse",1],
+  ["Brendon Mehlhorn",1],
+  ["Christy Schreiber",1],
+  ["Cristian Lorenzo",1],
+  ["Dalton Baker",1],
+  ["Jennifer Hombach",1],
+  ["Kephnie Mileon",1]
 ];
 
 const data = raw.map(r => ({

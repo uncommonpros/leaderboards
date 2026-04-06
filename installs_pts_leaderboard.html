@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Install PTS Leaderboard — Uncommon Division Q1 2026</title>
+<title>Install PTS Leaderboard — Uncommon Division Q2 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -358,7 +358,7 @@ tr.tier-low .pace-val { color:var(--slate);}
   </div>
   <div class="header-right">
     <div class="header-division">Uncommon Division</div>
-    <div class="header-period">Q1 2026</div>
+    <div class="header-period">Q2 2026</div>
   </div>
 </header>
 
@@ -368,7 +368,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <img class="brush-stroke" src="https://media-public.canva.com/3Q1Xw/MAFE443Q1Xw/1/t.png" alt="" />
     <h1 class="hero-title">Install PTS</h1>
   </div>
-  <div class="hero-eyebrow" style="margin-top:60px;">Q1 2026 &nbsp;·&nbsp; Uncommon Division</div>
+  <div class="hero-eyebrow" style="margin-top:60px;">Q2 2026 &nbsp;·&nbsp; Uncommon Division</div>
   <div class="hero-sub" style="margin-top:10px;">1 pt &nbsp;·&nbsp; Self-Gen Close &nbsp;&nbsp;|&nbsp;&nbsp; 0.5 pt &nbsp;·&nbsp; Lead Close &nbsp;&nbsp;|&nbsp;&nbsp; 0.5 pt &nbsp;·&nbsp; Assist</div>
   <div class="hero-divider" style="margin-top:16px;"><div class="hd-line"></div><div class="hd-dot"></div><div class="hd-line"></div></div>
 </section>
@@ -437,7 +437,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Self-Gen Close = 1 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Lead Close = 0.5 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--muted)"></div>Assist = 0.5 pt</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 90 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 6 of 91</div>
   </div>
 
 </div>
@@ -446,9 +446,9 @@ tr.tier-low .pace-val { color:var(--slate);}
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-// Q1 2026: day 62 of 90 (Jan 31 + Feb 28 + Mar 3)
-const Q1_ELAPSED = 90, Q1_TOTAL = 90;
-const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
+// Q2 2026: day 6 of 91
+const Q2_ELAPSED = 6, Q2_TOTAL = 91;
+const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(pts) {
   const pace = pts * PACE_MULT;
@@ -456,7 +456,7 @@ function tier(pts) {
 }
 
 // Regions from rep roster
-const regions = {"Brooke Altom Lowe":"Forged","Michael Licata":"Forged","Natasha Mansouri":"Forged","Chantal Helia Mansouri":"Forged","Micah John Rizzuto":"theRepublic","Nicholas Lee Howard":"theRepublic","Matthew Vincent Fulton":"Forged","Daniel Alexander Cavada":"Forged","Kristi Irene Caras":"Catalyst","Joshua Glenn Coen":"Forged","Joshua E Davis":"Forged","Brandon James Smith":"Forged","Jantzen Jarvis":"Forged","Otto Ranses Zelaya":"theRepublic","Jerry Wayne Jones":"Forged","Jay A Presley":"Forged","Ryan Stilwell":"Catalyst","Owen Marsh Haglund":"Forged","Michael Robert Green":"Forged","Cynita Woodhouse":"Forged","Nicholas Bradley Russo":"Forged","Roberto Garcia Jr":"theRepublic","Caleb Michael Sartin":"theRepublic","Matthew Jameson":"Catalyst","Dennis Tommy Larsen":"theRepublic","Dallen Akita":"Catalyst","Selena Marie Renee Salas":"theRepublic","Daniel Robert Nelson":"Forged","Ryan Boyd":"Forged","Justin Tribe":"Forged","James Edward Hall":"Forged","Cody Christopher Zacharyasz":"Forged","Michelle Marie Garcia":"Forged","Daniel Joseph Snow":"theRepublic","Omar Smaili":"Forged","Jordan Matthew Bagwell":"Catalyst","Austin Engemann":"theRepublic","Steve Hong":"theRepublic","Nehemiah Moore Arzeez":"Forged","Francisco Emmanuel Flores":"theRepublic","Sean Steve Lara":"Forged","Charles Heaton":"Catalyst","Paul Jacob Rypkema":"Forged","Elizabeth B Harris":"Forged","Wyatt Duane Maloy":"Catalyst","Sarah Mitchell":"Forged","Shiloh Howard":"theRepublic","Joshua Michael Wocher":"Forged","Matthew Ryan Midland":"theRepublic","David Darby":"Forged","Jeremy Mitchel Berger":"Forged","Jamell Harrell Mingo":"Catalyst","Michael Gold":"Forged","Aaron Michael Gunn":"Forged","Shawn Harding":"Catalyst","Maira Nicole Maxey - BLOCKED":"Forged","Frederick Montana Quirante":"Catalyst","Faiz Ahmed":"Forged","Jose Elias Fuentes Rodriguez":"theRepublic","Krista West":"Forged"};
+const regions = {"Jerry Wayne Jones":"Forged","Charles Heaton":"Catalyst","Joshua Glenn Coen":"Forged","Jay A Presley":"Forged","Rachel Amber Renko":"Forged","AlDeric D Cooper":"Forged","Jordan Matthew Bagwell":"Catalyst","Michael Gold":"Forged","Jose Elias Fuentes Rodriguez":"theRepublic","Ron Sisk":"theRepublic","Ramonito De Leon":"theRepublic","David Darby":"Forged","James Henry Jr":"Forged","Owen Marsh Haglund":"Forged","Robert Charles Willis Jr":"theRepublic","Joseph Duerr":"Forged","Daniel Alexander Cavada":"Forged","Brandon Quirante":"Catalyst","Rodney Perdomo":"theRepublic","Jantzen Jarvis":"Forged","Guyson Shimabukuro":"Forged","Greg Harris":"Forged","Frederick Montana Quirante":"Catalyst","Dillon Oliver":"theRepublic","Layla Diop":"Forged","Kristi Irene Caras":"Catalyst"};
 
 const SUFFIXES = new Set(['jr','sr','ii','iii','iv']);
 function shortName(full) {
@@ -469,66 +469,32 @@ function shortName(full) {
 
 // [full_name, closer_pts, setter_pts, total_pts]
 const raw = [
-  ["Brooke Altom Lowe",9.5,0,9.5],
-  ["Michael Licata",9,0,9],
-  ["Natasha Mansouri",7.5,0,7.5],
-  ["Chantal Helia Mansouri",7,0.5,7.5],
-  ["Micah John Rizzuto",6.5,0,6.5],
-  ["Nicholas Lee Howard",6.5,0,6.5],
-  ["Matthew Vincent Fulton",6.5,0,6.5],
-  ["Daniel Alexander Cavada",6,0.5,6.5],
-  ["Kristi Irene Caras",6,0.5,6.5],
-  ["Joshua Glenn Coen",6,0,6],
-  ["Joshua E Davis",6,0,6],
-  ["Brandon James Smith",5.5,0.5,6],
-  ["Jantzen Jarvis",5,0,5],
-  ["Otto Ranses Zelaya",5,0,5],
-  ["Jerry Wayne Jones",4.5,0.5,5],
-  ["Jay A Presley",4.5,0,4.5],
-  ["Ryan Stilwell",4.5,0,4.5],
-  ["Owen Marsh Haglund",4.5,0,4.5],
-  ["Michael Robert Green",4.5,0,4.5],
-  ["Cynita Woodhouse",3.5,1,4.5],
-  ["Nicholas Bradley Russo",4,0,4],
-  ["Roberto Garcia Jr",4,0,4],
-  ["Caleb Michael Sartin",4,0,4],
-  ["Matthew Jameson",4,0,4],
-  ["Dennis Tommy Larsen",4,0,4],
-  ["Dallen Akita",4,0,4],
-  ["Selena Marie Renee Salas",3.5,0.5,4],
-  ["Daniel Robert Nelson",3.5,0,3.5],
-  ["Ryan Boyd",3.5,0,3.5],
-  ["Justin Tribe",3.5,0,3.5],
-  ["James Edward Hall",3.5,0,3.5],
-  ["Cody Christopher Zacharyasz",3.5,0,3.5],
-  ["Michelle Marie Garcia",3.5,0,3.5],
-  ["Daniel Joseph Snow",3.5,0,3.5],
-  ["Omar Smaili",3.5,0,3.5],
-  ["Jordan Matthew Bagwell",3,0,3],
-  ["Austin Engemann",3,0,3],
-  ["Steve Hong",3,0,3],
-  ["Nehemiah Moore Arzeez",3,0,3],
-  ["Francisco Emmanuel Flores",3,0,3],
-  ["Sean Steve Lara",3,0,3],
-  ["Charles Heaton",3,0,3],
-  ["Paul Jacob Rypkema",3,0,3],
-  ["Elizabeth B Harris",3,0,3],
-  ["Wyatt Duane Maloy",2,1,3],
-  ["Sarah Mitchell",1,2,3],
-  ["Shiloh Howard",2.5,0,2.5],
-  ["Joshua Michael Wocher",2.5,0,2.5],
-  ["Matthew Ryan Midland",2.5,0,2.5],
-  ["David Darby",2.5,0,2.5],
-  ["Jeremy Mitchel Berger",2.5,0,2.5],
-  ["Jamell Harrell Mingo",2.5,0,2.5],
-  ["Michael Gold",2.5,0,2.5],
-  ["Aaron Michael Gunn",2.5,0,2.5],
-  ["Shawn Harding",2.5,0,2.5],
-  ["Maira Nicole Maxey - BLOCKED",2.5,0,2.5],
-  ["Frederick Montana Quirante",2.5,0,2.5],
-  ["Faiz Ahmed",2.5,0,2.5],
-  ["Jose Elias Fuentes Rodriguez",1.5,1,2.5],
-  ["Krista West",1,1.5,2.5]
+  ["Jerry Wayne Jones",1.5,0,1.5],
+  ["Charles Heaton",1.5,0,1.5],
+  ["Joshua Glenn Coen",1.5,0,1.5],
+  ["Jay A Presley",1.5,0,1.5],
+  ["Rachel Amber Renko",1,0,1],
+  ["AlDeric D Cooper",1,0,1],
+  ["Jordan Matthew Bagwell",1,0,1],
+  ["Michael Gold",1,0,1],
+  ["Jose Elias Fuentes Rodriguez",1,0,1],
+  ["Ron Sisk",1,0,1],
+  ["Ramonito De Leon",1,0,1],
+  ["David Darby",1,0,1],
+  ["James Henry Jr",1,0,1],
+  ["Owen Marsh Haglund",0.5,0,0.5],
+  ["Robert Charles Willis Jr",0.5,0,0.5],
+  ["Joseph Duerr",0.5,0,0.5],
+  ["Daniel Alexander Cavada",0.5,0,0.5],
+  ["Brandon Quirante",0.5,0,0.5],
+  ["Rodney Perdomo",0.5,0,0.5],
+  ["Jantzen Jarvis",0.5,0,0.5],
+  ["Guyson Shimabukuro",0.5,0,0.5],
+  ["Greg Harris",0.5,0,0.5],
+  ["Frederick Montana Quirante",0.5,0,0.5],
+  ["Dillon Oliver",0.5,0,0.5],
+  ["Layla Diop",0.5,0,0.5],
+  ["Kristi Irene Caras",0.5,0,0.5]
 ];
 
 
@@ -819,7 +785,7 @@ data.forEach((r,i) => {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Install PTS Leaderboard — Uncommon Division Q1 2026</title>
+<title>Install PTS Leaderboard — Uncommon Division Q2 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1174,7 +1140,7 @@ tr.tier-low .pace-val { color:var(--slate);}
   </div>
   <div class="header-right">
     <div class="header-division">Uncommon Division</div>
-    <div class="header-period">Q1 2026</div>
+    <div class="header-period">Q2 2026</div>
   </div>
 </header>
 
@@ -1184,7 +1150,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <img class="brush-stroke" src="https://media-public.canva.com/3Q1Xw/MAFE443Q1Xw/1/t.png" alt="" />
     <h1 class="hero-title">Install PTS</h1>
   </div>
-  <div class="hero-eyebrow" style="margin-top:60px;">Q1 2026 &nbsp;·&nbsp; Uncommon Division</div>
+  <div class="hero-eyebrow" style="margin-top:60px;">Q2 2026 &nbsp;·&nbsp; Uncommon Division</div>
   <div class="hero-sub" style="margin-top:10px;">1 pt &nbsp;·&nbsp; Self-Gen Close &nbsp;&nbsp;|&nbsp;&nbsp; 0.5 pt &nbsp;·&nbsp; Lead Close &nbsp;&nbsp;|&nbsp;&nbsp; 0.5 pt &nbsp;·&nbsp; Assist</div>
   <div class="hero-divider" style="margin-top:16px;"><div class="hd-line"></div><div class="hd-dot"></div><div class="hd-line"></div></div>
 </section>
@@ -1253,7 +1219,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Self-Gen Close = 1 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Lead Close = 0.5 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--muted)"></div>Assist = 0.5 pt</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 64 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 6 of 91</div>
   </div>
 
 </div>
@@ -1262,9 +1228,9 @@ tr.tier-low .pace-val { color:var(--slate);}
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-// Q1 2026: day 62 of 90 (Jan 31 + Feb 28 + Mar 3)
-const Q1_ELAPSED = 64, Q1_TOTAL = 90;
-const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
+// Q2 2026: day 6 of 91
+const Q2_ELAPSED = 6, Q2_TOTAL = 91;
+const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(pts) {
   const pace = pts * PACE_MULT;

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Region Installs — Uncommon Division Q1 2026</title>
+<title>Region Installs — Uncommon Division Q2 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -185,7 +185,7 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
   </div>
   <div class="header-right">
     <div class="header-division">Uncommon Division</div>
-    <div class="header-period">Q1 2026</div>
+    <div class="header-period">Q2 2026</div>
   </div>
 </header>
 
@@ -194,8 +194,8 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
     <img class="brush-stroke" src="https://media-public.canva.com/3Q1Xw/MAFE443Q1Xw/1/t.png" alt="" />
     <h1 class="hero-title">Region Installs</h1>
   </div>
-  <div class="hero-eyebrow" style="margin-top:60px;">Q1 2026 &nbsp;·&nbsp; Uncommon Division</div>
-  <div class="hero-sub" style="margin-top:10px;">Total Installs Per Region · Q1 2026 Install Date</div>
+  <div class="hero-eyebrow" style="margin-top:60px;">Q2 2026 &nbsp;·&nbsp; Uncommon Division</div>
+  <div class="hero-sub" style="margin-top:10px;">Total Installs Per Region · Q2 2026 Install Date</div>
   <div class="hero-divider" style="margin-top:16px;"><div class="hd-line"></div><div class="hd-dot"></div><div class="hd-line"></div></div>
 </section>
 
@@ -260,7 +260,7 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Region Total Installs</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Installs</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q1 total · Day 90 of 90</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 6 of 91</div>
   </div>
 
 </div>
@@ -269,8 +269,8 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q1_ELAPSED = 90, Q1_TOTAL = 90;
-const PACE_MULT = Q1_TOTAL / Q1_ELAPSED;
+const Q2_ELAPSED = 6, Q2_TOTAL = 91;
+const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(val) {
   const pace = val * PACE_MULT;
@@ -278,9 +278,9 @@ function tier(val) {
 }
 
 const data = [
-  {region:"Forged",val:306,reps:85,avg:3.6,pace:306.0},
-  {region:"theRepublic",val:131,reps:58,avg:2.3,pace:131.0},
-  {region:"Catalyst",val:112,reps:42,avg:2.7,pace:112.0}
+  {region:"Forged",val:21,reps:15,avg:1.4,pace:21.0},
+  {region:"Catalyst",val:7,reps:5,avg:1.4,pace:7.0},
+  {region:"theRepublic",val:6,reps:6,avg:1.0,pace:6.0}
 ];
 
 data.sort((a,b) => b.val - a.val);
