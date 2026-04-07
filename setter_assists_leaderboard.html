@@ -360,9 +360,9 @@ tbody td:last-child { text-align:right; }
 </div>
 
 <script>
-const DAYS_ELAPSED = 90;
+const DAYS_ELAPSED = 7;
 const DAYS_IN_Q2 = 91;
-const PACE_MULT = DAYS_IN_Q2 / DAYS_ELAPSED;  // 91/6 = ~15.2;
+const PACE_MULT = DAYS_IN_Q2 / DAYS_ELAPSED;  // 91/7 = ~13.0
   if (pts >= 6)  return 'mid';
   return 'low';
 }
@@ -378,16 +378,17 @@ function shortName(full) {
 // Raw data: [name, assists]
 const raw = [
   ["Nicholas Killilea",2],
-  ["Mary Childress",1],
-  ["Andrea Burkhimer",1],
-  ["Shawn Sizer",1],
+  ["Dalton Baker",2],
   ["Milton Dowse",1],
-  ["Brendon Mehlhorn",1],
-  ["Christy Schreiber",1],
-  ["Cristian Lorenzo",1],
-  ["Dalton Baker",1],
+  ["Andrea Burkhimer",1],
+  ["Robert Lambright",1],
+  ["Shawn Sizer",1],
+  ["Mary Childress",1],
+  ["Kephnie Mileon",1],
   ["Jennifer Hombach",1],
-  ["Kephnie Mileon",1]
+  ["Cristian Lorenzo",1],
+  ["Christy Schreiber",1],
+  ["Brendon Mehlhorn",1]
 ];
 
 const data = raw.map(r => ({

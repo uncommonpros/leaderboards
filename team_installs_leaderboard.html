@@ -278,7 +278,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Team Total Installs</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Installs</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 6 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
   </div>
 
 </div>
@@ -287,7 +287,7 @@ tr.tier-cold .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q2_ELAPSED = 6, Q2_TOTAL = 91;
+const Q2_ELAPSED = 7, Q2_TOTAL = 91;
 const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(val) {
@@ -298,26 +298,28 @@ function tier(val) {
 const data = [
   {team:"L ACooper (VA)",region:"Forged",val:6,reps:3,avg:2.0,pace:6.0},
   {team:"L Coen (AZ)",region:"Forged",val:3,reps:1,avg:3.0,pace:3.0},
-  {team:"L Fulton (IL)",region:"Forged",val:2,reps:1,avg:2.0,pace:2.0},
-  {team:"L Jameson/Bagwell (AZ)",region:"Catalyst",val:2,reps:1,avg:2.0,pace:2.0},
+  {team:"X Harding",region:"Catalyst",val:3,reps:2,avg:1.5,pace:3.0},
   {team:"L Oliver (CA)",region:"theRepublic",val:2,reps:2,avg:1.0,pace:2.0},
+  {team:"L Fulton (IL)",region:"Forged",val:2,reps:1,avg:2.0,pace:2.0},
+  {team:"L Caras (CA)",region:"Catalyst",val:2,reps:1,avg:2.0,pace:2.0},
+  {team:"L Jameson/Bagwell (AZ)",region:"Catalyst",val:2,reps:1,avg:2.0,pace:2.0},
   {team:"L Quirante (FL)",region:"Catalyst",val:2,reps:2,avg:1.0,pace:2.0},
-  {team:"X Harding",region:"Catalyst",val:2,reps:1,avg:2.0,pace:2.0},
-  {team:"L Maxey (IL)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"L Midland (CA)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"L Morgan (OH)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"X Shimabukuro",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"X Jarvis",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"L Schreiber (CO)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"L Snow (FL)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"L Alexander (CA)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"L Caras (CA)",region:"Catalyst",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"L Cavada (ME)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"L Duerr (PA)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"L Fuentes/Salas (CA)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"L Gold (OH)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Hong/Rizzuto (CA)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Licata (CA)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Maxey (IL)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Midland (CA)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Morgan (OH)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Schreiber (CO)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"L Snow (FL)",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
   {team:"X Haglund",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0},
-  {team:"L Licata (CA)",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0}
+  {team:"X Hogue",region:"theRepublic",val:1,reps:1,avg:1.0,pace:1.0},
+  {team:"X Jarvis",region:"Forged",val:1,reps:1,avg:1.0,pace:1.0}
 ];
 
 data.sort((a,b) => b.val - a.val);

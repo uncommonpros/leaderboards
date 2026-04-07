@@ -227,7 +227,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Network total Net Sales across all teams</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 6 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
   </div>
 
 </div>
@@ -236,7 +236,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q2_ELAPSED = 6, Q2_TOTAL = 91;
+const Q2_ELAPSED = 7, Q2_TOTAL = 91;
 const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(val) {

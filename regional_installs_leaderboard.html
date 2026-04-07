@@ -260,7 +260,7 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Region Total Installs</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Active Reps = Reps with at least 1 Installs</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 6 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
   </div>
 
 </div>
@@ -269,7 +269,7 @@ tr.tier-cold .pace-val { color:#2a4a6e; }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q2_ELAPSED = 6, Q2_TOTAL = 91;
+const Q2_ELAPSED = 7, Q2_TOTAL = 91;
 const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(val) {
@@ -279,8 +279,8 @@ function tier(val) {
 
 const data = [
   {region:"Forged",val:21,reps:15,avg:1.4,pace:21.0},
-  {region:"Catalyst",val:7,reps:5,avg:1.4,pace:7.0},
-  {region:"theRepublic",val:6,reps:6,avg:1.0,pace:6.0}
+  {region:"Catalyst",val:9,reps:6,avg:1.5,pace:9.0},
+  {region:"theRepublic",val:8,reps:8,avg:1.0,pace:8.0}
 ];
 
 data.sort((a,b) => b.val - a.val);
