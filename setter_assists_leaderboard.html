@@ -363,6 +363,9 @@ tbody td:last-child { text-align:right; }
 const DAYS_ELAPSED = 7;
 const DAYS_IN_Q2 = 91;
 const PACE_MULT = DAYS_IN_Q2 / DAYS_ELAPSED;  // 91/7 = ~13.0
+
+function tier(pts) {
+  if (pts >= 10) return 'hot';
   if (pts >= 6)  return 'mid';
   return 'low';
 }
