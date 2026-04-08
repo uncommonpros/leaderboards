@@ -437,7 +437,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Self-Gen Close = 1 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Lead Close = 0.5 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--muted)"></div>Assist = 0.5 pt</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 8 of 91</div>
   </div>
 
 </div>
@@ -446,8 +446,8 @@ tr.tier-low .pace-val { color:var(--slate);}
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-// Q2 2026: day 7 of 91
-const Q2_ELAPSED = 7, Q2_TOTAL = 91;
+// Q2 2026: day 8 of 91
+const Q2_ELAPSED = 8, Q2_TOTAL = 91;
 const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(pts) {
@@ -456,7 +456,7 @@ function tier(pts) {
 }
 
 // Regions from rep roster
-const regions = {"Jerry Wayne Jones":"Forged","Charles Heaton":"Catalyst","Kristi Irene Caras":"Catalyst","Jay A Presley":"Forged","Joshua Glenn Coen":"Forged","Jose Elias Fuentes Rodriguez":"theRepublic","AlDeric D Cooper":"Forged","Michael Gold":"Forged","Rachel Amber Renko":"Forged","Ramonito De Leon":"theRepublic","David Darby":"Forged","James Henry Jr":"Forged","Jordan Matthew Bagwell":"Catalyst","Ron Sisk":"theRepublic","Steve Hong":"theRepublic","Daniel Alexander Cavada":"Forged","Greg Harris":"Forged","Selena Marie Renee Salas":"theRepublic","Dillon Oliver":"theRepublic","Layla Diop":"Forged","Guyson Shimabukuro":"Forged","Joseph Duerr":"Forged","Robert Charles Willis Jr":"theRepublic","Jantzen Jarvis":"Forged","Rodney Perdomo":"theRepublic","Frederick Montana Quirante":"Catalyst","Owen Marsh Haglund":"Forged","Brandon Quirante":"Catalyst","Mohammed Sheriff":"Catalyst"};
+const regions = {"Jerry Wayne Jones":"Forged","Justin Tribe":"Forged","Charles Heaton":"Catalyst","Kristi Irene Caras":"Catalyst","Jay A Presley":"Forged","Joshua Glenn Coen":"Forged","Daniel Alexander Cavada":"Forged","Jose Elias Fuentes Rodriguez":"theRepublic","Rachel Amber Renko":"Forged","James Henry Jr":"Forged","Jordan Matthew Bagwell":"Catalyst","Ramonito De Leon":"theRepublic","Ron Sisk":"theRepublic","Michael Gold":"Forged","David Darby":"Forged","AlDeric D Cooper":"Forged","Robert Charles Willis Jr":"theRepublic","Jantzen Jarvis":"Forged","Steve Hong":"theRepublic","Selena Marie Renee Salas":"theRepublic","Frederick Montana Quirante":"Catalyst","Guyson Shimabukuro":"Forged","Owen Marsh Haglund":"Forged","Joseph Duerr":"Forged","Brandon Quirante":"Catalyst","Dillon Oliver":"theRepublic","Anthony Louis Alexander":"theRepublic","Greg Harris":"Forged","Mohammed Sheriff":"Catalyst","Layla Diop":"Forged","Austin Engemann":"theRepublic","Rodney Perdomo":"theRepublic"};
 
 const SUFFIXES = new Set(['jr','sr','ii','iii','iv']);
 function shortName(full) {
@@ -470,34 +470,37 @@ function shortName(full) {
 // [full_name, closer_pts, setter_pts, total_pts]
 const raw = [
   ["Jerry Wayne Jones",1.5,0,1.5],
+  ["Justin Tribe",1.5,0,1.5],
   ["Charles Heaton",1.5,0,1.5],
   ["Kristi Irene Caras",1.5,0,1.5],
   ["Jay A Presley",1.5,0,1.5],
   ["Joshua Glenn Coen",1.5,0,1.5],
+  ["Daniel Alexander Cavada",1.5,0,1.5],
   ["Jose Elias Fuentes Rodriguez",1,0.5,1.5],
-  ["AlDeric D Cooper",1,0,1],
-  ["Michael Gold",1,0,1],
   ["Rachel Amber Renko",1,0,1],
-  ["Ramonito De Leon",1,0,1],
-  ["David Darby",1,0,1],
   ["James Henry Jr",1,0,1],
   ["Jordan Matthew Bagwell",1,0,1],
+  ["Ramonito De Leon",1,0,1],
   ["Ron Sisk",1,0,1],
-  ["Steve Hong",0.5,0,0.5],
-  ["Daniel Alexander Cavada",0.5,0,0.5],
-  ["Greg Harris",0.5,0,0.5],
-  ["Selena Marie Renee Salas",0.5,0,0.5],
-  ["Dillon Oliver",0.5,0,0.5],
-  ["Layla Diop",0.5,0,0.5],
-  ["Guyson Shimabukuro",0.5,0,0.5],
-  ["Joseph Duerr",0.5,0,0.5],
-  ["Robert Charles Willis Jr",0.5,0,0.5],
+  ["Michael Gold",1,0,1],
+  ["David Darby",1,0,1],
+  ["AlDeric D Cooper",1,0,1],
+  ["Robert Charles Willis Jr",0.5,0.5,1],
   ["Jantzen Jarvis",0.5,0,0.5],
-  ["Rodney Perdomo",0.5,0,0.5],
+  ["Steve Hong",0.5,0,0.5],
+  ["Selena Marie Renee Salas",0.5,0,0.5],
   ["Frederick Montana Quirante",0.5,0,0.5],
+  ["Guyson Shimabukuro",0.5,0,0.5],
   ["Owen Marsh Haglund",0.5,0,0.5],
+  ["Joseph Duerr",0.5,0,0.5],
   ["Brandon Quirante",0.5,0,0.5],
-  ["Mohammed Sheriff",0.5,0,0.5]
+  ["Dillon Oliver",0.5,0,0.5],
+  ["Anthony Louis Alexander",0.5,0,0.5],
+  ["Greg Harris",0.5,0,0.5],
+  ["Mohammed Sheriff",0.5,0,0.5],
+  ["Layla Diop",0.5,0,0.5],
+  ["Austin Engemann",0.5,0,0.5],
+  ["Rodney Perdomo",0.5,0,0.5]
 ];
 
 
@@ -1222,7 +1225,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Self-Gen Close = 1 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Lead Close = 0.5 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--muted)"></div>Assist = 0.5 pt</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 8 of 91</div>
   </div>
 
 </div>
@@ -1231,8 +1234,8 @@ tr.tier-low .pace-val { color:var(--slate);}
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-// Q2 2026: day 7 of 91
-const Q2_ELAPSED = 7, Q2_TOTAL = 91;
+// Q2 2026: day 8 of 91
+const Q2_ELAPSED = 8, Q2_TOTAL = 91;
 const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(pts) {

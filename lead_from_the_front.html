@@ -437,7 +437,7 @@ tr.tier-low .pace-val { color:var(--slate);}
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Self-Gen Close = 1 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--sky)"></div>Lead Close = 0.5 pt</div>
     <div class="fl-item"><div class="fl-dot" style="background:var(--muted)"></div>Assist = 0.5 pt</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 8 of 91</div>
   </div>
 
 </div>
@@ -446,8 +446,8 @@ tr.tier-low .pace-val { color:var(--slate);}
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-// Q2 2026: day 7 of 91
-const Q2_ELAPSED = 7, Q2_TOTAL = 91;
+// Q2 2026: day 8 of 91
+const Q2_ELAPSED = 8, Q2_TOTAL = 91;
 const PACE_MULT  = Q2_TOTAL / Q2_ELAPSED; // 1.5
 
 function tier(pts) {
@@ -456,18 +456,21 @@ function tier(pts) {
 }
 
 const data = [
-  {n:"Daniel Snow",region:"theRepublic",p:2,sg:2,lc:0,a:0,pts:2},
-  {n:"Jordan Alexander",region:"Catalyst",p:2,sg:2,lc:0,a:0,pts:2},
+  {n:"Jordan Alexander",region:"Catalyst",p:4,sg:4,lc:0,a:0,pts:4},
+  {n:"Daniel Snow",region:"theRepublic",p:1,sg:1,lc:0,a:0,pts:1},
+  {n:"Micah Rizzuto",region:"theRepublic",p:1,sg:1,lc:0,a:0,pts:1},
+  {n:"Todd Hair",region:"theRepublic",p:1,sg:1,lc:0,a:0,pts:1},
   {n:"Nicholas Howard",region:"theRepublic",p:2,sg:0,lc:2,a:0,pts:1},
   {n:"Rob Garcia",region:"theRepublic",p:1,sg:1,lc:0,a:0,pts:1},
   {n:"Otto Zelaya",region:"theRepublic",p:1,sg:1,lc:0,a:0,pts:1},
   {n:"Christy Schreiber",region:"Forged",p:1,sg:0,lc:1,a:0.5,pts:1},
-  {n:"Joseph Duerr",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5},
-  {n:"Kyle Keppel",region:"theRepublic",p:1,sg:0,lc:1,a:0,pts:0.5},
   {n:"Michael Gold",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5},
-  {n:"Brandon Smith",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5},
   {n:"Sultan Ahmed",region:"theRepublic",p:1,sg:0,lc:1,a:0,pts:0.5},
-  {n:"Greg Harris",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5}
+  {n:"Greg Harris",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5},
+  {n:"Joseph Duerr",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5},
+  {n:"Matthew Jameson",region:"Catalyst",p:1,sg:0,lc:1,a:0,pts:0.5},
+  {n:"Kyle Keppel",region:"theRepublic",p:1,sg:0,lc:1,a:0,pts:0.5},
+  {n:"Brandon Smith",region:"Forged",p:1,sg:0,lc:1,a:0,pts:0.5}
 ];
 
 data.sort((a,b) => b.pts - a.pts || b.sg - a.sg);

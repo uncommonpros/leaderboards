@@ -227,7 +227,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 
   <div class="footer-legend">
     <div class="fl-item"><div class="fl-dot" style="background:var(--cyan)"></div>Network total Installs across all teams</div>
-    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 7 of 91</div>
+    <div class="fl-item" style="opacity:.5">Pace = projected Q2 total · Day 8 of 91</div>
   </div>
 
 </div>
@@ -236,7 +236,7 @@ tr.tier-cold    .pace-val { color:var(--cold); }
 document.getElementById('upd').textContent =
   'Updated ' + new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}).toUpperCase();
 
-const Q2_ELAPSED = 7, Q2_TOTAL = 91;
+const Q2_ELAPSED = 8, Q2_TOTAL = 91;
 const PACE_MULT = Q2_TOTAL / Q2_ELAPSED;
 
 function tier(val) {
@@ -245,12 +245,12 @@ function tier(val) {
 }
 
 const data = [
-  {name:"Jacob Davis / Mike Licata",region:"Forged",val:5,pace:5.0},
+  {name:"Jacob Davis / Mike Licata",region:"Forged",val:7,pace:7.0},
   {name:"Dan Snow / Dillon Oliver",region:"theRepublic",val:3,pace:3.0},
-  {name:"Crystal Hogue",region:"theRepublic",val:2,pace:2.0},
+  {name:"Anthony Alexander",region:"theRepublic",val:3,pace:3.0},
   {name:"Matt Jameson / Jordan Bagwell",region:"Catalyst",val:2,pace:2.0},
+  {name:"Crystal Hogue",region:"theRepublic",val:2,pace:2.0},
   {name:"Dennis Larsen",region:"theRepublic",val:2,pace:2.0},
-  {name:"Anthony Alexander",region:"theRepublic",val:1,pace:1.0},
   {name:"Justin Johiro",region:"Forged",val:1,pace:1.0}
 ];
 
